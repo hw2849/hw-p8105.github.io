@@ -1,0 +1,23 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# This is Jeff's awesome website
+
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+i can link to useful things like 
+[google]() and [p8105](https://www.p8105.com/index.html)
+
+i can make an extra page on mu site and link to that. Here's my [about](about.html) page.
+
+## here's ted
+
+My cat
+![](img src="images/image.jpg" style="width:75%")
+
+link it to [plotly](plotly.html)
