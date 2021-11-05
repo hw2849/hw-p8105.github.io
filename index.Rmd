@@ -1,5 +1,5 @@
 ---
-title: "Haotian's HOmepage"
+title: "Haotian's Homepage"
 output: 
   html_document:
     toc: true
@@ -19,6 +19,6 @@ Here's my [experience](about.html) page.
 
 My lovely Disney puffy family. 
 
-<img src="image.jpg" style="width:75%">
+<img src="image1.png" style="width:75%">
 
 I create some awesome [plots](plots.html).
