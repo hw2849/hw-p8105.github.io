@@ -43,6 +43,6 @@ Hy-Vee, Inc, Minneapolis, MN, USA
 
 * Data Analyst	Sept.2019-Jul.2020
 
-To [index](index.html) page.
+To [home](index.html) page.
 
-To [plots](plots.html) page.
+To my awesome [plots](plots.html) page.

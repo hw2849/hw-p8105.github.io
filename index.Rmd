@@ -7,18 +7,25 @@ output:
     theme: cosmo
 ---
 ## Profile
-Haotian Wu
 
-Hangzhou, China
+<img src="IMG_0191.JPG" style="width:75%">
 
-I am taking Data Science, course information can be found [here](https://www.p8105.com/index.html).
+This is me and my bestie. 
+
+Name: Haotian Wu (Hailey)
+
+City: Hangzhou, China
 
 Here's my [experience](about.html) page.
 
-## Here's my collections
+
+## My collections
 
 My lovely Disney puffy family. 
 
 <img src="image1.png" style="width:75%">
 
-I create some awesome [plots](plots.html).
+## Other
+I create some awesome [plots](plots.html) on NYC restaurant inspection data. 
+
+I am taking Data Science, course information can be found [here](https://www.p8105.com/index.html).
