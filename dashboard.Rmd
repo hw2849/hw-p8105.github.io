@@ -1,0 +1,85 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+knitr::opts_chunk$set(
+  echo = TRUE, warning = FALSE, message = FALSE
+)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+```{r}
+data("rest_inspec")
+
+my_data = rest_inspec %>% 
+  rename(district = boro) %>% ## readable names
+  select(## select variables
+    district, cuisine_description, 
+    inspection_date, dba, score, grade
+    ) %>% 
+  filter(## narrow my data
+    grade %in% c("A", "B", "C"), 
+    district != "Missing") 
+```
+### Chart A
+
+```{r}
+## scatterplot 
+my_data %>%     
+  filter( ## detect all korean restaurant
+    str_detect(cuisine_description, "[Kk][Oo][Rr][Ee][Aa][Nn]")
+    ) %>% 
+  mutate( ## the tiny label showing grade and dba
+    text_label = str_c("Type:", dba, "\nGrade: ", grade) 
+  ) %>% 
+  plot_ly(
+    x = ~inspection_date, 
+    y = ~score, 
+    type = "scatter", 
+    mode = "markers", 
+    color = ~district, 
+    text = ~text_label, 
+    alpha = .3
+  )
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+my_data %>% 
+    filter( ## detect all grade A restaurant
+    grade == "A"
+    ) %>% 
+  mutate(
+    cuisione_description = fct_reorder(cuisine_description, score)
+  ) %>% 
+plot_ly(y = ~ score, color = ~ district, type = "box", 
+        colors = "viridis")
+```
+
+### Chart C
+```{r}
+## bar plot showing Korean restaurant in all district vs grade
+my_data %>% 
+filter( ## detect all korean restaurant
+    str_detect(cuisine_description, "[Kk][Oo][Rr][Ee][Aa][Nn]")
+    ) %>% 
+  plot_ly(x = ~district, y = ~score, fill = ~grade, color = ~grade, 
+          type = "bar", colors = "viridis")
+```
+
+To [index](index.html) page.
