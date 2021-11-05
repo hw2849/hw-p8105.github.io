@@ -1,0 +1,87 @@
+---
+title: "Plots"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+---
+
+here is the link to [index](index.html) page.
+
+This page is about plotly examples
+
+```{r}
+library(tidyverse)
+library(stringr)
+library(plotly)
+library(p8105.datasets)
+knitr::opts_chunk$set(
+  echo = TRUE, warning = FALSE, message = FALSE
+)
+```
+
+Let's look at the NYC airbnb data
+```{r}
+data("rest_inspec")
+
+my_data = rest_inspec %>% 
+  rename(district = boro) %>% ## readable names
+  select(## select variables
+    district, cuisine_description, 
+    inspection_date, dba, score, grade
+    ) %>% 
+  filter(## narrow my data
+    grade %in% c("A", "B", "C"), 
+    district != "Missing") 
+```
+
+## Plotly Scatterplot
+
+Here's a plotly scatterplot showing Korean restaurant in all district with grades across the inspection date!
+```{r}
+## scatterplot 
+my_data %>%     
+  filter( ## detect all korean restaurant
+    str_detect(cuisine_description, "[Kk][Oo][Rr][Ee][Aa][Nn]")
+    ) %>% 
+  mutate( ## the tiny label showing grade and dba
+    text_label = str_c("Type:", dba, "\nGrade: ", grade) 
+  ) %>% 
+  plot_ly(
+    x = ~inspection_date, 
+    y = ~score, 
+    type = "scatter", 
+    mode = "markers", 
+    color = ~district, 
+    text = ~text_label, 
+    alpha = .3
+  )
+```
+
+## Plotly boxplot
+
+```{r}
+my_data %>% 
+    filter( ## detect all grade A restaurant
+    grade == "A"
+    ) %>% 
+  mutate(
+    cuisione_description = fct_reorder(cuisine_description, score)
+  ) %>% 
+plot_ly(y = ~ score, color = ~ district, type = "box", 
+        colors = "viridis")
+```
+
+## Plotly bar plot
+```{r}
+## bar plot showing Korean restaurant in all district vs grade
+my_data %>% 
+filter( ## detect all korean restaurant
+    str_detect(cuisine_description, "[Kk][Oo][Rr][Ee][Aa][Nn]")
+    ) %>% 
+  plot_ly(x = ~district, y = ~score, fill = ~grade, color = ~grade, 
+          type = "bar", colors = "viridis")
+```
+
+

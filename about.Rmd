@@ -4,7 +4,7 @@ output:
   html_document:
     toc: true
     toc_float: true
-
+    theme: cosmo
 ---
 This page is about my experience! 
 
@@ -45,4 +45,4 @@ Hy-Vee, Inc, Minneapolis, MN, USA
 
 To [index](index.html) page.
 
-To [plots](plotly.html) page.
+To [plots](plots.html) page.

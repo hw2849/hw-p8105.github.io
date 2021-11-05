@@ -4,6 +4,7 @@ output:
   html_document:
     toc: true
     toc_float: true
+    theme: cosmo
 ---
 
 here is the link to [index](index.html) page.
