@@ -1,10 +1,10 @@
 ---
-title: "About me"
+title: "My experience"
 output: 
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+
 ---
 This page is about my experience! 
 
@@ -43,7 +43,6 @@ Hy-Vee, Inc, Minneapolis, MN, USA
 
 * Data Analyst	Sept.2019-Jul.2020
 
+To [index](index.html) page.
 
-
-
-Here is the link to [index](index.html) page.
+To [plots](plotly.html) page.

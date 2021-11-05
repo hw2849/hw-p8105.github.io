@@ -4,15 +4,21 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+
 ---
+## Profile
+Haotian Wu
 
-## Here's my collections
-
-![]<img src="image.jpg" style="width:75%">
+Hangzhou, China
 
 I am taking Data Science, course information can be found [here](https://www.p8105.com/index.html).
 
-Here's my [about](about.html) page.
+Here's my [experience](about.html) page.
 
-link it to [plotly](plotly.html)
+## Here's my collections
+
+My lovely Disney puffy family. 
+
+<img src="image.jpg" style="width:75%">
+
+I create some awesome [plots](plotly.html).
