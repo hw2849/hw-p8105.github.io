@@ -1,10 +1,49 @@
 ---
-title: "about"
+title: "About me"
 output: 
   html_document:
     toc: true
     toc_float: true
     theme: cerulean
 ---
+This page is about my experience! 
 
-here is the link to [index](index.html) page.
+### Education
+Columbia University in the City of New York, NY, USA	Sept.2021-Present
+
+* M.S. in Biostatistics, Public Health Data Science
+
+* Expected graduation: May. 2023
+
+University of Wisconsin, Eau Claire, WI, USA	Sept.2015-May.2019
+
+* B.S. in Mathematics, Minor: Public Health
+
+* GPA: 3.75/4.0, Core GPA:3.98/4.0
+
+* Degree Honors: Magna Cum Laude Honor, University Honors Program, Department Honors in Mathematics 
+
+### Research Experience 
+Quantile and Skew-Normal Regression for Out-of-Hospital Performance Evaluation  
+
+* Mentor: Professor Mohammad Aziz (UW-EC)	Feb.2018-May.2018
+
+Moduli Space of High Dimensional Complex Associative Algebra
+
+* Mentor: Professor Michael Penkava (UW-EC)	Jan.2016-May.2019
+
+
+### Work Experience
+
+Hangzhou Lion Microelectronics Co., Ltd, Hangzhou China	
+
+* System Engineer	Sep.2020-Jul.2021
+
+Hy-Vee, Inc, Minneapolis, MN, USA 	
+
+* Data Analyst	Sept.2019-Jul.2020
+
+
+
+
+Here is the link to [index](index.html) page.

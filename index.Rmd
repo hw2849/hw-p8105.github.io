@@ -1,5 +1,5 @@
 ---
-title: "My awesome website"
+title: "Haotian's website"
 output: 
   html_document:
     toc: true
@@ -7,17 +7,12 @@ output:
     theme: cerulean
 ---
 
-# This is Jeff's awesome website
+## Here's my collections
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
-i can link to useful things like 
-[google]() and [p8105](https://www.p8105.com/index.html)
+![]<img src="image.jpg" style="width:75%">
 
-i can make an extra page on mu site and link to that. Here's my [about](about.html) page.
+I am taking Data Science, course information can be found [here](https://www.p8105.com/index.html).
 
-## here's ted
-
-My cat
-![](img src="images/image.jpg" style="width:75%")
+Here's my [about](about.html) page.
 
 link it to [plotly](plotly.html)
